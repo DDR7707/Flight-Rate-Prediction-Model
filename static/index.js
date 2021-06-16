@@ -36,10 +36,10 @@ $("#destinationPlace").click(function() {
 $("#stops").click(function(){
   $(this).click(function(){
     if(!initial3){
-      $("#addPackage option[value=1LL]").show();
-      $("#addPackage option[value=1SL]").show();
-      $("#addPackage option[value=2LL]").show();
-      $("#addPackage option[value=changeAirports]").show();
+      $("#addPackage option[value=One Long Layover]").show();
+      $("#addPackage option[value=One Short Layover]").show();
+      $("#addPackage option[value=Two Long Layover]").show();
+      $("#addPackage option[value=Change Airports]").show();
     }
     var option=$("#stops :selected").val();
     if(option=="0"){
