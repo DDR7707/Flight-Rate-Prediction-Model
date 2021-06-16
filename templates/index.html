@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Get Your Flight Price</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="static/styles.css">
+
+<body>
+
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">FLIGHT PRICE PREDICTION MODEL</span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <form class="" action="/" method="post">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="item">
+            <label for="journeyDate">Journey Date</label><br>
+            <input type="date" id="journeyDate" name = "j_date" required>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <label for="journeyTime">Journey Time</label><br>
+            <input type="time" name="j_time" required>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-6">
+          <div class="item">
+            <label for="sourcePlace">Source Place</label><br>
+            <select id="sourcePlace" selected="none" name="s" required>
+              <option disabled selected value>-- select a Source Place--</option>
+              <option value="banglore">Banglore</option>
+              <option value="chennai">Chennai</option>
+              <option value="delhi">Delhi</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="mumbai">Mumbai</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <label for="destinationPlace">Destination Place</label><br>
+            <select id="destinationPlace" name="d" required>
+              <option disabled selected value>-- select a Destination place--</option>
+              <option value="banglore">Banglore</option>
+              <option value="newdelhi">New Delhi</option>
+              <option value="delhi">Delhi</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="cochin">Cochin</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <label for="airlineName">Airline Name</label><br>
+            <select id="airlineName" name="a" required>
+              <option disabled selected value>-- select an airline--</option>
+              <option value="air Asia">Air Asia</option>
+              <option value="air India">Air India</option>
+              <option value="go air">GoAir</option>
+              <option value="indigo">Indigo</option>
+              <option value="jetairways">Jet Airways</option>
+              <option value="jetairways bussiness">Jet Airways Bussiness</option>
+              <option value="multiple carriers">Multiple Carriers</option>
+              <option value="multiple carriers premium">Multiple Carriers Premium</option>
+              <option value="spicejet">SpiceJet</option>
+              <option value="trujet">TruJet</option>
+              <option value="vistara">Vistara</option>
+              <option value="vistara premium">Vistara Premium</option>
+            </select>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="item">
+            <label for="stops">No of stops</label><br>
+            <select id="stops" name="st" required>
+              <option disabled selected value>-- select no of stops--</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="item">
+            <label for="journeyDuration">Journey Duration</label><br>
+            <input type="time" name="j_d" min="01:20" required>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="item">
+            <label for="addPackage">Additional Package</label><br>
+            <select id="addPackage" name = "adp">
+              <option disabled selected value>-- select Additional Package--</option>
+              <option value="One Long Layover">One Long Layover</option>
+              <option value="One Short Layover">One Short Layover</option>
+              <option value="Two Long Layover">Two Long Layover</option>
+              <option value="Bussiness Class">Bussiness Class</option>
+              <option value="Change Airports">Change Airports</option>
+              <option value="No Meal">In-flight meal not included</option>
+              <option value="No Info">No Info</option>
+              <option value="No Baggage">No check-in baggage included</option>
+              <option value="Red Eye Flight">Red-eye Flight</option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+      <button type="submit" class="btn btn-lg btn-light" name="button">Get price</button>
+    </form>
+    <br>
+    <h3>{{ prediction_value }}</h3>
+    <br>
+    <h5>{{ text_output }}</h5>
+    <br>
+    <p>©2021 DDR , Frontend by RK</p>
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../static/index.js" charset="utf-8"></script>
+</body>
+
+</html>

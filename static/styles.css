@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+  background-color: #A2B29F;
+}
+
+
+.container-fluid{
+  padding-left: 2%;
+}
+
+.item{
+  background-color: #fff;
+  margin: 4% ;
+  padding: 2% 0;
+  font-weight: 500;
+}
+label{
+  margin-bottom: 2%;
+}
+
+
+input,select{
+  width: 35%;
+}
+
+.btn{
+  margin-top: 3%;
+}
